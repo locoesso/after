@@ -24,9 +24,9 @@ sudo mkdir -p /media/Pluto
 sudo mkdir -p /media/Mercury
 sudo mkdir -p /media/Mariner
 sudo mkdir -p /media/Voyager
-# sudo mkdir -p /media/Shared
+sudo mkdir -p /media/Shared
 
-# echo "/dev/disk/by-uuid/d83021bf-5773-4e99-9781-c3ec225befd6 /media/Shared auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Shared 0 0" | sudo tee -a /etc/fstab
+echo "/dev/disk/by-uuid/d83021bf-5773-4e99-9781-c3ec225befd6 /media/Shared auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Shared 0 0" | sudo tee -a /etc/fstab
 
 echo "Add lines to fstab"
 echo "//phobos/Delta		/media/Delta		cifs	iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
