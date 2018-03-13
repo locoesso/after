@@ -29,6 +29,7 @@ usershare owner only = false
 
 # Change this to the workgroup/NT-domain name your Samba server will part of
 	workgroup = WORKGROUP
+	netbios name = phobos
 
 # server string is the equivalent of the NT Description field
 	server string = %h server (Samba, Ubuntu)
