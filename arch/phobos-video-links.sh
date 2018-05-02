@@ -1,9 +1,6 @@
 #!/bin/sh
 
-ln -s /media/Mercury/Video/ ~/Videos/Mercury
-ln -s /media/Mercury/Video/TV ~/Videos/TV
-ln -s /media/Delta/Video/ ~/Videos/Delta
-ln -s /media/Epsilon/Video/ ~/Videos/Epsilon
-ln -s /media/Hadraniel/Video/ ~/Videos/Hadraniel
-ln -s /media/Pluto/Video/ ~/Videos/Pluto
-
+ln -s /mnt/Altair/Video/ ~/Videos/Altair
+ln -s /mnt/Altair/Video/TV ~/Videos/TV
+ln -s /mnt/Betelgeuse/Video/ ~/Videos/Betelgeuse
+ln -s /mnt/Canopus/Video/ ~/Videos/Canopus

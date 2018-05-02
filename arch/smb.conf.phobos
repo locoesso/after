@@ -29,9 +29,10 @@ usershare owner only = false
 
 # Change this to the workgroup/NT-domain name your Samba server will part of
 	workgroup = WORKGROUP
+    netbios name = phobos
 
 # server string is the equivalent of the NT Description field
-	server string = %h server (Samba, Ubuntu)
+	server string = %h server
 
 # Windows Internet Name Serving Support Section:
 # WINS Support - Tells the NMBD component of Samba to enable its WINS Server
@@ -261,48 +262,29 @@ usershare owner only = false
 # to the drivers directory for these users to have write rights in it
 ;   write list = root, @lpadmin
 
-[Delta]
-	path = /media/Delta
+[Altair]
+	path = /mnt/Altair
 	writeable = yes
 ;	browseable = yes
-	valid users = esso, esaha
+	valid users = locoesso
+	guest ok = no
 
-[Epsilon]
-	path = /media/Epsilon
+[Betelgeuse]
+	path = /mnt/Betelgeuse
 	writeable = yes
 ;	browseable = yes
-	valid users = esso, esaha
+	valid users = locoesso
+	guest ok = no
 
-[Hadraniel]
-	path = /media/Hadraniel
+[Canopus]
+	path = /mnt/Canopus
 	writeable = yes
 ;	browseable = yes
-	valid users = esso, esaha
-
-[Pluto]
-	path = /media/Pluto
-	writeable = yes
-;	browseable = yes
-	valid users = esso, esaha
-
-[Mercury]
-	path = /media/Mercury
-	writeable = yes
-;	browseable = yes
-	valid users = esso, esaha
-
-[Mariner]
-	path = /media/Mariner
-	writeable = yes
-;	browseable = yes
-	valid users = esso, esaha
-
-[Voyager]
-	path = /media/Voyager
-	writeable = yes
-	valid users = esso, esaha
-	
+	valid users = locoesso
+	guest ok = no
 [Downloads]
-	path = /media/Shared/Downloads
+	path = /mnt/Altair/Downloads
 	writeable = yes
-	valid users = esso, esaha
+	valid users = locoesso
+	guest ok = no
+
