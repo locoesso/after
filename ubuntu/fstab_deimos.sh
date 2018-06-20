@@ -5,7 +5,7 @@ echo "***** USE SUDO *****"
 echo "********************"
 read -p "Press any key..."
 
-sudo apt install cifs-utils
+sudo apt install cifs-utils smbclient
 
 echo "Samba user credentials"
 read -p "Username:   " username
@@ -22,11 +22,10 @@ sudo cp /etc/fstab /etc/fstab.$now
 
 sudo mkdir -p /media/Altair
 sudo mkdir -p /media/Betelgeuse
-sudo mkdir -p /media/Canopus
 
-echo "//phobos/Altair		/media/Altair		cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
-echo "//phobos/Betelgeuse	/media/Betelgeuse	cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
-echo "//phobos/Canopus		/media/Canopus		cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
+
+echo "//192.168.2.101/Altair		/media/Altair		cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
+echo "//192.168.2.101/Betelgeuse	/media/Betelgeuse	cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
 
 echo "Mount filesystems"
 sudo mount -a
@@ -34,4 +33,3 @@ sudo mount -a
 ln -s /media/Altair/Video/ ~/Videos/Altair
 ln -s /media/Altair/Video/TV ~/Videos/TV
 ln -s /media/Betelgeuse/Video/ ~/Videos/Betelgeuse
-ln -s /media/Canopus/Video/ ~/Videos/Canopus
