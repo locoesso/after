@@ -1,7 +1,3 @@
-ln -s /media/Mercury/Video/ ~/Videos/Mercury
-ln -s /media/Mercury/Video/TV ~/Videos/TV
-ln -s /media/Delta/Video/ ~/Videos/Delta
-ln -s /media/Epsilon/Video/ ~/Videos/Epsilon
-ln -s /media/Hadraniel/Video/ ~/Videos/Hadraniel
-ln -s /media/Pluto/Video/ ~/Videos/Pluto
-
+ln -s /mnt/Altair/Video /home/esso/Videos/Altair
+ln -s /mnt/Altair/Video/TV /home/esso/Videos/TV
+ln -s /mnt/Betelgeuse/Video /home/esso/Videos/Betelgeuse
