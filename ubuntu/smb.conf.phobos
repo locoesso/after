@@ -260,10 +260,14 @@
 
 
 [Altair]
+	writeable = yes
 	path = /mnt/Altair
 
 [Backup]
 	path = /mnt/Backup
 
 [Betelgeuse]
+	writeable = yes
+	force user = esso
 	path = /mnt/Betelgeuse
+	force group = esso
