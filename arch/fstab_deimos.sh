@@ -18,6 +18,8 @@ sudo cp /etc/fstab /etc/fstab.$now
 
 sudo mkdir -p /media/Altair
 sudo mkdir -p /media/Betelgeuse
+sudo mkdir -p /mnt/Apophis
+sudo mkdir -p /mnt/Data
 
 
 echo "//phobos/Altair		/media/Altair		cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
