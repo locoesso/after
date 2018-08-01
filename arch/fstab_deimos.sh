@@ -20,12 +20,10 @@ sudo mkdir -p /media/Altair
 sudo mkdir -p /media/Betelgeuse
 
 
-echo "//192.168.2.101/Altair		/media/Altair		cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
-echo "//192.168.2.101/Betelgeuse	/media/Betelgeuse	cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
+echo "//phobos/Altair		/media/Altair		cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
+echo "//phobos/Betelgeuse	/media/Betelgeuse	cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
+echo "/dev/disk/by-uuid/74911197-06fb-442d-aa97-ea63d6f16ea4 /mnt/Apophis auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Apophis 0 0" | sudo tee -a /etc/fstab
+echo "/dev/disk/by-uuid/10B07312B072FE12 /mnt/Data ntfs-3g nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Data 0 0" | sudo tee -a /etc/fstab
 
 echo "Mount filesystems"
 sudo mount -a
-
-ln -s /media/Altair/Video/ ~/Videos/Altair
-ln -s /media/Altair/Video/TV ~/Videos/TV
-ln -s /media/Betelgeuse/Video/ ~/Videos/Betelgeuse
