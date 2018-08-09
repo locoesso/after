@@ -22,10 +22,12 @@ sudo cp /etc/fstab /etc/fstab.$now
 
 sudo mkdir -p /media/Altair
 sudo mkdir -p /media/Betelgeuse
+sudo mkdir -p /media/Backup
 
 
-echo "//192.168.2.101/Altair		/media/Altair		cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
-echo "//192.168.2.101/Betelgeuse	/media/Betelgeuse	cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
+echo "//phobos/Altair		/media/Altair		cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
+echo "//phobos/Betelgeuse	/media/Betelgeuse	cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
+echo "//phobos/Backup	    /media/Backup       cifs	comment=systemd.automount,iocharset=utf8,credentials=$HOME/.smbcredentials,uid=1000	0	0" | sudo tee -a /etc/fstab
 
 echo "Mount filesystems"
 sudo mount -a
