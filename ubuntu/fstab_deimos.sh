@@ -1,10 +1,5 @@
 #/bin/sh
 
-echo "********************"
-echo "***** USE SUDO *****"
-echo "********************"
-read -p "Press any key..."
-
 sudo apt install cifs-utils smbclient
 
 echo "Samba user credentials"
