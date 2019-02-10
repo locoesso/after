@@ -261,13 +261,13 @@
 
 [Altair]
 	writeable = yes
-	path = /mnt/Altair
+	path = /mnt/altair
 
-[Backup]
-	path = /mnt/Backup
+#[Backup]
+#	path = /mnt/backup
 
 [Betelgeuse]
 	writeable = yes
 	force user = esso
-	path = /mnt/Betelgeuse
+	path = /mnt/betelgeuse
 	force group = esso
