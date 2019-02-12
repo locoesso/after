@@ -263,8 +263,8 @@
 	writeable = yes
 	path = /mnt/altair
 
-#[Backup]
-#	path = /mnt/backup
+[Celaeno]
+	path = /mnt/celaeno
 
 [Betelgeuse]
 	writeable = yes
