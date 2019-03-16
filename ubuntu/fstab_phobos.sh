@@ -1,10 +1,5 @@
 #/bin/bash
 
-echo "********************"
-echo "***** USE SUDO *****"
-echo "********************"
-read -p "Press any key..."
-
 now=$(date +"%d-%m-%Y_%H.%M.%S")
 
 sudo apt install samba
