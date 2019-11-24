@@ -9,10 +9,10 @@ sudo systemctl enable smb nmb
 sudo firewall-cmd --add-service=samba --permanent
 sudo firewall-cmd --reload
 
-# sudo setsebool -P samba_enable_home_dirs on
+sudo setsebool -P samba_enable_home_dirs on
 
 sudo pdbedit -a esso
 
-# sudo cp smb.conf.phobos /etc/samba/smb.conf
+sudo cp smb.conf.phobos /etc/samba/smb.conf
 
 sudo systemctl restart smb nmb
