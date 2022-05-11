@@ -1,6 +1,6 @@
 #/bin/sh
 
-sudo pacman -S cifs-utils
+# sudo pacman -S cifs-utils
 
 echo "Samba user credentials"
 read -p "Username:   " username
