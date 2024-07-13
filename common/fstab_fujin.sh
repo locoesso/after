@@ -7,7 +7,7 @@ read -p "Username:   " username
 read -p "Password:   " password
 	echo username="$username" >$HOME/.smb/credentials
 	echo password="$password" >>$HOME/.smb/credentials
-echo "$HOME/.smb/credentials:"
+sudo echo "$HOME/.smb/credentials:"
 more $HOME/.smb/credentials
 sudo chown root ~/.smb/credentials
 sudo chmod 600 ~/.smb/credentials
